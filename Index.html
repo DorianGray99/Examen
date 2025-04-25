@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Landing Page</title>
+    <style>
+        .bg-skyblue {
+            background-color: skyblue;
+        }
+        body {
+            position: relative;
+        }
+        /* Estilos del Acordeon */
+        .accordion-button .bg-chartreuse{
+            background-color: chartreuse;
+            color: black;
+        }
+        .accordion-button:not(.collapsed){
+            background-color: chartreuse;
+        }
+        .accordion-body .custom-body{
+            background-color: skyblue;
+            color: chartreuse;
+        }
+        .accordion-item{
+            border: 1px solid chartreuse;
+        }
+        </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="70" tabindex="0">
+  <nav class="navbar navbar-expand-lg bg-skyblue fixed-top">
+      <div class="container-fluid">
+          <a class="navbar-brand" href="#">Medical Surgery</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+              aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#inicio">Inicio</a>
+          </li>
+          <li class="nav-item">
+              <li class="nav-item">
+                <a class="nav-link" href="#iconos">Iconos</a>
+              </li>
+            <a class="nav-link" href="#informacion">Información</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#galeria">Galería</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#accordion">Accordion</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#card">Card</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#modal">Ventana Modal</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#formulario">Formulario</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#footer">Footer</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
+          <button class="btn btn-outline-success" type="submit">Buscar</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Sección de Inicio -->
+   <main>
+  <div id="inicio" id="carouselExample" class="carousel slide container-fluid">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="Cristina.jpg" class="d-block w-100" alt="Cardiologa">
+      </div>
+      <div class="carousel-item">
+        <img src="Derek.jpg" class="d-block w-100" alt="Neurocirujano">
+      </div>
+      <div class="carousel-item">
+        <img src="Mark.jpg" class="d-block w-100" alt="Cirujano Plastico">
+      </div>
+      <div class="carousel-item">
+        <img src="Callie.jpg" class="d-block w-100" alt="Ortopedista">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#inicio" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Anterior</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#inicio" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Siguiente</span>
+    </button>
+  </div>
+  
+  <!-- Sección Iconos -->
+  <div id="iconos" class="container text-center my-5">
+    <h3 class="mb-4">Áreas de Cirugía</h3>
+    <div class="row">
+      <div class="col-md-6 d-flex flex-column align-items-center gap-4">
+        <div>
+          <i class="bi bi-heart-pulse display-4 text-danger"></i>
+          <h6 class="mt-2">Cardiología</h6>
+        </div>
+        <div>
+          <i class="bi bi-emoji-expressionless display-4 text-warning"></i>
+          <h6 class="mt-2">Neurocirugía</h6>
+        </div>
+      </div>
+      <div class="col-md-6 d-flex flex-column align-items-center gap-4">
+        <div>
+          <i class="bi bi-stars display-4 text-primary"></i>
+          <h6 class="mt-2">Cirugía Plástica</h6>
+        </div>
+        <div>
+          <i class="bi bi-bounding-box-circles display-4 text-success"></i>
+          <h6 class="mt-2">Ortopedia</h6>
+        </div>
+      </div>
+    </div>
+  </div>  
+
+  <!-- Sección de Informacion con tarjetas -->
+  <div id="informacion" class="container my-5">
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+      <div class="col">
+        <div class="card">
+          <img src="Cardio.jpg" class="card-img-top" alt="Cardiologia">
+          <div class="card-body">
+            <h5 class="card-title">Cardiologia</h5>
+            <p class="card-text">Un cardiólogo es un médico especializado en el diagnóstico, tratamiento y prevención de enfermedades del corazón y del sistema cardiovascular. Se encarga de problemas como la hipertensión, insuficiencia cardíaca, arritmias y enfermedades coronarias.</p>
+            <button type="button" onclick="window.open('https://www.aprendelo.org/cardiologia/','')" class="btn btn-success">Acerca de</button>
+            <a href="https://www.who.int/es/news-room/fact-sheets/detail/cardiovascular-diseases-(cvds)" class="btn bg-skyblue text-black">Enfermedades comunes</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="Neuro.jpg" class="card-img-top" alt="Neurocirugia">
+          <div class="card-body">
+            <h5 class="card-title">Neurocirugia</h5>
+            <p class="card-text">Un neurocirujano es un médico especializado en el diagnóstico y tratamiento quirúrgico de enfermedades del sistema nervioso, incluyendo el cerebro, la médula espinal y los nervios periféricos. Trata condiciones como tumores cerebrales, hernias discales, traumatismos craneales y malformaciones congénitas.</p>
+            <button type="button" onclick="window.open('https://centroaura.mx/neurocirugia','')" class="btn btn-success">Acerca de</button>
+            <a href="https://rubinoneurocirugia.com/blog/neurocirugia-tecnicas-avanzadas-y-procedimientos-clave/" class="btn bg-skyblue text-black">Procedimientos comunes</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="Plastica.jpg" class="card-img-top" alt="Cirugia Plastica">
+          <div class="card-body">
+            <h5 class="card-title">Cirugia Plastica</h5>
+            <p class="card-text">Un cirujano plástico es un médico especializado en realizar intervenciones quirúrgicas para reconstruir, reparar o mejorar la apariencia del cuerpo. Su trabajo abarca desde cirugías estéticas (como rinoplastias o liposucciones) hasta reconstrucciones por lesiones, quemaduras o malformaciones congénitas.</p>
+            <button type="button" onclick="window.open('https://secpre.org/que-es-la-cirugia-plastica.php','')" class="btn btn-success">Acerca de</button>
+            <a href="https://www.clinicadeloccidente.com/blog/cirugias-plasticas/" class="btn bg-skyblue text-black">Tipos de cirugias</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="Ortopedia.jpg" class="card-img-top" alt="Ortopedia">
+          <div class="card-body">
+            <h5 class="card-title">Ortopedia</h5>
+            <p class="card-text">Un cirujano ortopedista es un médico especializado en el diagnóstico, tratamiento y cirugía de lesiones y enfermedades del sistema musculoesquelético, que incluye huesos, articulaciones, ligamentos, tendones y músculos. Trata problemas como fracturas, artritis, lesiones deportivas y deformidades óseas.</p>
+            <button type="button" onclick="window.open('https://definicion.de/ortopedia/','')" class="btn btn-success">Acerca de</button>
+            <a href="https://www.medicoverhospitals.in/es/articles/common-orthopedic-injuries" class="btn bg-skyblue text-black">Condiciones comunes</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+<!-- Sección de Galería -->
+  <div id="galeria" class="container my-5">
+    <div class="row g-4">
+      <div class="col-6">
+        <img src="Procedimiento de Cardio.jpg" class="img-fluid rounded" alt="Cirugia cardiologica">
+      </div>
+      <div class="col-6">
+        <img src="Procedimiento de Neuro.jpg" class="img-fluid rounded" alt="Neurocirugia">
+      </div>
+      <div class="col-6">
+        <img src="Procedimiento de Plastica.jpg" class="img-fluid rounded" alt="Cirugia Plastica">
+      </div>
+      <div class="col-6">
+        <img src="Procedimiento de Ortopedia.jpg" class="img-fluid rounded" alt="Cirugia Ortopedica">
+      </div>
+    </div>
+  </div>  
+
+<!-- Sección de Accordion -->
+<div id="accordion" class="container mt-5">
+    <div class="row">
+      <div class="col-12">
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed bg-skyblue text-black" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                🫀 Cardiologia
+              </button>
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
+                Procedimientos quirúrgicos que tratan enfermedades del corazón y vasos sanguíneos.  
+                <br><strong>Ejemplos:</strong> Bypass coronario, reemplazo de válvulas.  
+                <br><strong>Beneficios:</strong> Mejora del flujo sanguíneo y prevención de infartos.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed bg-skyblue text-black" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                🧠 Neurocirugía
+              </button>
+            </h2>
+            <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
+                Intervenciones quirúrgicas del cerebro, médula espinal y nervios periféricos.  
+                <br><strong>Ejemplos:</strong> Resección de tumores, tratamiento de epilepsia.  
+                <br><strong>Avances:</strong> Técnicas mínimamente invasivas y neuronavegación.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed bg-skyblue text-black" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                💉 Cirugía Plástica
+              </button>
+            </h2>
+            <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
+                Cirugía estética o reconstructiva para mejorar apariencia o funcionalidad.  
+                <br><strong>Ejemplos:</strong> Rinoplastia, reconstrucción mamaria, injertos de piel.  
+                <br><strong>Beneficios:</strong> Mejora emocional, autoestima y calidad de vida.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed bg-skyblue text-black" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                🦴 Ortopedia
+              </button>
+            </h2>
+            <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
+                Cirugía del sistema musculoesquelético: huesos, articulaciones y ligamentos.  
+                <br><strong>Ejemplos:</strong> Prótesis de cadera, corrección de escoliosis.  
+                <br><strong>Objetivo:</strong> Restaurar movilidad, aliviar dolor, mejorar vida diaria.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>  
+<br>
+  <!-- Seccion card -->
+<div id="card" class="container d-flex justify-content-center align-items-center">
+    <div class="card" style="width: 18rem;">
+      <img src="sgh.jpg" class="card-img-top" alt="Hospital Seattle Grace">
+      <div class="card-body">
+        <h5 class="card-title">Seattle Grace Hospital</h5>
+        <p class="card-text">El hospital Seattle Grace (SGH) es un lugar de enseñanza que se enfoca en formar residentes y titulares dentro de las áreas de especialidad: cardiocirugía, neurocirugía, cirugía plástica y ortopedia. El hospital cuenta con un gran rendimiento en sus especialidades contando con procedimientos tanto para adultos, como para niños siendo este uno de los mejores centros médicos y quirúrgicos en general. Contando así, con uno de los mejores personales de cirujanos especializados.</p>
+      </div>
+    </div>
+  </div>
+
+<!-- Sección ventanas Modales -->
+<div id="modal" class="container my-5">
+    <div class="card text-center">
+      <div class="card-header">
+        Especialidades Quirúrgicas
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Servicios de Excelencia en Cirugía</h5>
+        <p class="card-text">En Seattle Grace Hospital, ofrecemos atención quirúrgica de primer nivel en múltiples especialidades para cuidar de tu salud con experiencia y tecnología moderna.</p>
+        <button type="button" class="btn btn-info text-white" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          Ver Servicios Ofrecidos
+        </button>
+      </div>
+      <div class="card-footer text-body-secondary">
+        Actualizado recientemente
+      </div>
+    </div>
+  
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Especialidades Quirúrgicas - Seattle Grace Hospital</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body text-start">
+            <ul>
+              <li><strong>🫀 Cardiología:</strong> Tratamientos quirúrgicos avanzados como bypass coronario y reemplazo de válvulas, realizados por nuestro equipo de cirujanos cardiovasculares altamente calificados.</li>
+              <li><strong>🧠 Neurocirugía:</strong> Intervenciones de alta precisión en cerebro y columna con tecnología de neuronavegación para el manejo de tumores, aneurismas y más.</li>
+              <li><strong>💉 Cirugía Plástica:</strong> Servicios estéticos y reconstructivos personalizados, incluyendo cirugía postraumática, reconstrucción mamaria y procedimientos faciales.</li>
+              <li><strong>🦴 Ortopedia:</strong> Cirugías especializadas en huesos, articulaciones y columna vertebral, con enfoque en prótesis, corrección de deformidades y traumatología deportiva.</li>
+            </ul>
+            En Seattle Grace Hospital, combinamos experiencia médica, trato humano y tecnología de punta para brindarte la mejor atención quirúrgica.
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <button type="button" class="btn btn-primary" id="modalSaveBtn">Solicitar Información</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="h1 text-center my-5">Notificaciones</h2>
+  <div class="text-center mb-4">
+    <button type="button" class="btn btn-success" id="liveToastBtn">Más sobre nuestros servicios</button>
+  </div>
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <strong class="me-auto">Seattle Grace Hospital</strong>
+        <small>Hace un momento</small>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Cerrar"></button>
+      </div>
+      <div class="toast-body">
+        Gracias por tu interés. Pronto uno de nuestros asesores te brindará más información sobre nuestros servicios quirúrgicos especializados.
+      </div>
+    </div>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const toastTrigger = document.getElementById('liveToastBtn');
+      const modalSaveBtn = document.getElementById('modalSaveBtn');
+      const toastLiveExample = document.getElementById('liveToast');
+      if (toastTrigger && toastLiveExample) {
+        const toastBootstrap = new bootstrap.Toast(toastLiveExample);
+        toastTrigger.addEventListener('click', () => toastBootstrap.show());
+      }
+      if (modalSaveBtn) {
+        modalSaveBtn.addEventListener('click', () => {
+          const toastBootstrap = new bootstrap.Toast(toastLiveExample);
+          toastBootstrap.show();
+        });
+      }
+    });
+  </script>  
+
+    <!-- Seccion Formulario -->
+  <br>
+  <h5 class="text-center mb-4">Regístrate aquí para conocer más sobre nuestro hospital</h5>
+  <form id="formulario" class="row g-3">
+    <div class="col-md-6">
+      <label for="nombre" class="form-label">Nombre</label>
+      <input type="text" class="form-control" id="nombre" required>
+    </div>
+    <div class="col-md-6">
+      <label for="apellidos" class="form-label">Apellidos</label>
+      <input type="text" class="form-control" id="apellidos" required>
+    </div>
+    <div class="col-md-6">
+      <label for="correo" class="form-label">Correo electrónico</label>
+      <input type="email" class="form-control" id="correo" required>
+    </div>
+    <div class="col-md-6">
+      <label for="contrasena" class="form-label">Contraseña</label>
+      <input type="password" class="form-control" id="contrasena" required>
+    </div>
+    <div class="col-12">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="terminos" required>
+        <label class="form-check-label" for="terminos">
+          Acepto los términos y condiciones
+        </label>
+      </div>
+    </div>
+    <div class="col-12">
+      <button class="btn btn-primary" type="submit">Registrarse</button>
+    </div>
+  </form> 
+
+  <br>
+<!-- Footer -->
+<footer id="footer" class="text-black text-center text-lg-start" style="background-color: skyblue; width: 100%;">
+    <section class="d-flex justify-content-between align-items-center p-4 flex-wrap" style="background-color: #50e8ab;">
+      <div class="mb-2 mb-md-0">
+        <span>Conéctate con nosotros en redes sociales:</span>
+      </div>
+      <div>
+        <a href="https://facebook.com" target="_blank" class="text-black me-4">
+          <i class="fab fa-facebook-f fa-lg"></i>
+        </a>
+        <a href="https://instagram.com" target="_blank" class="text-black me-4">
+          <i class="fab fa-instagram fa-lg"></i>
+        </a>
+        <a href="https://wa.me/1234567890" target="_blank" class="text-black me-4">
+          <i class="fab fa-whatsapp fa-lg"></i>
+        </a>
+      </div>
+    </section>
+    <section class="pt-5 pb-4">
+      <div class="container text-center text-md-start text-black">
+        <div class="row mt-3">
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <h6 class="text-uppercase fw-bold">Seattle Grace Hospital</h6>
+            <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: skyblue; height: 2px" />
+            <p>Especialistas en cardiología, neurocirugía, cirugía plástica y ortopedia. Comprometidos con la salud de nuestros pacientes.</p>
+          </div>
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <h6 class="text-uppercase fw-bold">Especialidades</h6>
+            <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: skyblue; height: 2px" />
+            <p><a href="#!" class="text-black">Cardiología</a></p>
+            <p><a href="#!" class="text-black">Neurocirugía</a></p>
+            <p><a href="#!" class="text-black">Plástica</a></p>
+            <p><a href="#!" class="text-black">Ortopedia</a></p>
+          </div>
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <h6 class="text-uppercase fw-bold">Enlaces útiles</h6>
+            <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: skyblue; height: 2px" />
+            <p><a href="#!" class="text-black">Tu cuenta</a></p>
+            <p><a href="#!" class="text-black">Reservar cita</a></p>
+            <p><a href="#!" class="text-black">Contáctanos</a></p>
+            <p><a href="#!" class="text-black">Ayuda</a></p>
+          </div>
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <h6 class="text-uppercase fw-bold">Contacto</h6>
+            <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: skyblue; height: 2px" />
+            <p><i class="fas fa-home me-2 text-black"></i> Washington, Seattle, E.U.A.</p>
+            <p><i class="fas fa-envelope me-2 text-black"></i> contacto @hospitalSeattleGrace.com</p>
+            <p><i class="fas fa-phone me-2 text-black"></i> +206 55 1234 5678</p>
+            <p><i class="fas fa-print me-2 text-black"></i> +206 55 8765 4321</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="text-center p-3 text-white" style="background-color: rgba(0, 0, 0, 0.674);">
+      ©2025 Seattle Grace Hospital. Todos los derechos reservados.
+    </div>
+  </footer>
+  </div>  
+  </main>
+  <script src="bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
